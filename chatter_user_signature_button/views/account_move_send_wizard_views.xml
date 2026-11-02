@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Invoice email composer has its own wizard in Odoo 19. -->
+    <record id="account_move_send_signature_button" model="ir.ui.view">
+        <field name="name">account.move.send.wizard.signature.button</field>
+        <field name="model">account.move.send.wizard</field>
+        <field name="inherit_id" ref="account.account_move_send_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='move_id']" position="after">
+                <field name="can_edit_body" invisible="1"/>
+                <field name="sending_methods" invisible="1"/>
+            </xpath>
+            <xpath expr="//footer/button[@name='action_send_and_print'][1]" position="before">
+                <field name="body"
+                       widget="user_signature_insert_button"
+                       nolabel="1"
+                       invisible="'email' not in sending_methods or not can_edit_body"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

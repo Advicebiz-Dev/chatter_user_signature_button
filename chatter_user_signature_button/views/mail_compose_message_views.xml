@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Covers quotations, sales orders, purchase orders, CRM and the full
+         composer opened from chatter. This adds only a button field: the
+         standard body HTML, send action, template and footer remain intact. -->
+    <record id="mail_compose_message_signature_button" model="ir.ui.view">
+        <field name="name">mail.compose.message.signature.button</field>
+        <field name="model">mail.compose.message</field>
+        <field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email_layout_xmlid']" position="after">
+                <field name="email_add_signature" invisible="1"/>
+            </xpath>
+            <xpath expr="//footer/button[@name='action_send_mail'][1]" position="before">
+                <field name="body"
+                       widget="user_signature_insert_button"
+                       nolabel="1"
+                       invisible="not can_edit_body or subtype_is_log"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

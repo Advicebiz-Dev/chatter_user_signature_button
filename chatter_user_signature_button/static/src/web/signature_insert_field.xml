@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="chatter_user_signature_button.SignatureInsertField">
+        <button type="button"
+                class="btn btn-secondary btn-sm o-mail-add-user-signature"
+                t-att-disabled="state.busy or props.readonly"
+                t-on-click="onClickInsertSignature">
+            <i class="fa fa-pencil-square-o me-1" aria-hidden="true"/>
+            <t t-esc="label"/>
+        </button>
+    </t>
+</templates>

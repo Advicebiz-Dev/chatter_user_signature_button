@@ -1,0 +1,32 @@
+# Translation of Odoo Server.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: chatter_user_signature_button
+msgid "Add Signature"
+msgstr "Adicionar Assinatura"
+
+#. module: chatter_user_signature_button
+msgid "Configure your email signature in My Profile before adding it."
+msgstr "Configure a sua assinatura de e-mail em O meu perfil antes de a adicionar."
+
+#. module: chatter_user_signature_button
+msgid "Your signature is already in this message."
+msgstr "A sua assinatura já está nesta mensagem."
+
+#. module: chatter_user_signature_button
+msgid "It was not possible to refresh your signature. Please try again."
+msgstr "Não foi possível atualizar a sua assinatura. Tente novamente."
+
+#. module: chatter_user_signature_button
+msgid "It was not possible to identify the current user."
+msgstr "Não foi possível identificar o utilizador atual."
+
+#. module: chatter_user_signature_button
+msgid "Configure your email signature in My Profile before inserting it."
+msgstr "Configure a sua assinatura de e-mail em O meu perfil antes de a inserir."

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="chatter_user_signature_button.Composer"
+       t-inherit="mail.Composer"
+       t-inherit-mode="extension">
+        <xpath expr="//t[@t-call='mail.Composer.sendButton']" position="before">
+            <button t-if="env.inChatter and !props.composer.message"
+                    type="button"
+                    class="btn btn-secondary btn-sm me-2 o-chatter-add-signature"
+                    t-on-click="onClickAddUserSignature">
+                Adicionar Assinatura
+            </button>
+        </xpath>
+    </t>
+</templates>
